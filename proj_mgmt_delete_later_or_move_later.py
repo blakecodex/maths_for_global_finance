@@ -36,10 +36,14 @@ plt.show()
 # Provide file for download
 image_path
 
-import pandas as pd
-import ace_tools as tools
 
-# Define the tabular structure without special characters to avoid font issues
+import pandas as pd
+import matplotlib
+matplotlib.font_manager.findSystemFonts(fontpaths=None, fontext='ttf')
+
+import pandas as pd
+
+# Define data without special characters
 data = {
     "Category": ["Final Deliverables", "Final Deliverables", "Final Deliverables", 
                  "Transition Timing", "Transition Timing", 
@@ -58,5 +62,9 @@ data = {
 # Create DataFrame
 df = pd.DataFrame(data)
 
-# Display the table
-tools.display_dataframe_to_user(name="Final Deliverables Table", dataframe=df)
+# Save to Excel file (ensure safe path)
+file_path = r"C:\Users\YourUsername\Documents\final_deliverables_cleaned.xlsx"  # Change the path as needed
+
+df.to_excel(file_path, index=False)
+
+print(f"Excel file saved successfully at: {file_path}")
