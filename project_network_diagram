@@ -1,0 +1,26 @@
+digraph {
+	A [label="Plan deck (16h)" shape=box]
+	B [label="Design Deck (6h)" shape=box]
+	C [label="Dig holes (8h)" shape=box]
+	D [label="Cut posts (2h)" shape=box]
+	E [label="Install posts (8h)" shape=box]
+	F [label="Pour concrete (4h)" shape=box]
+	G [label="Cut wood for floor (4h)" shape=box]
+	H [label="Install floor (8h)" shape=box]
+	I [label="Cut wood for railing (4h)" shape=box]
+	J [label="Install railing (16h)" shape=box]
+	K [label="Paint deck (8h)" shape=box]
+	A -> B
+	A -> C
+	B -> D
+	B -> G
+	C -> E
+	D -> E
+	E -> F
+	G -> H
+	D -> I
+	I -> J
+	F -> K
+	H -> K
+	J -> K
+}

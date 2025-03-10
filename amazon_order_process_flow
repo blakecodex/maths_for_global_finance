@@ -1,0 +1,54 @@
+digraph {
+	Start [label=Start fillcolor=lightgreen shape=ellipse style=filled]
+	B [label="Browse Products"]
+	S [label="Select Item"]
+	O [label="Place Order"]
+	P [label="Payment Processed"]
+	Sh [label="Order Shipped"]
+	R [label="Receive Product"]
+	G [label="Satisfied?" fillcolor=lightblue shape=diamond style=filled]
+	L [label="Leave Review"]
+	Pub [label="Publish Review"]
+	CS [label="Contact Support"]
+	RR [label="Return/Refund Process"]
+	End [label=End fillcolor=lightgreen shape=ellipse style=filled]
+	Start -> B
+	B -> S
+	S -> O
+	O -> P
+	P -> Sh
+	Sh -> R
+	R -> G
+	G -> L [label=Yes]
+	L -> Pub
+	Pub -> End
+	G -> CS [label=No]
+	CS -> RR
+	RR -> End
+	Start [label=Start fillcolor=lightgreen shape=ellipse style=filled]
+	B [label="Browse Products"]
+	S [label="Select Item"]
+	O [label="Place Order"]
+	P [label="Payment Processed"]
+	Sh [label="Order Shipped"]
+	R [label="Receive Product"]
+	G [label="Satisfied?" fillcolor=lightblue shape=diamond style=filled]
+	L [label="Leave Review"]
+	Pub [label="Publish Review"]
+	CS [label="Contact Support"]
+	RR [label="Return/Refund Process"]
+	End [label=End fillcolor=lightgreen shape=ellipse style=filled]
+	Start -> B
+	B -> S
+	S -> O
+	O -> P
+	P -> Sh
+	Sh -> R
+	R -> G
+	G -> L [label=Yes]
+	L -> Pub
+	Pub -> End
+	G -> CS [label=No]
+	CS -> RR
+	RR -> End
+}
